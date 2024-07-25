@@ -63,12 +63,13 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: my-build-package
-        path: dist/*.whl
+        path: bikeshare_project-20240725T043601Z-001/bikeshare_project/dist/*.whl
         retention-days: 1
 
   push-image:
     needs: [train, test, build]
     runs-on: ubuntu-latest
+
     steps:
     - name: Repo Checkout
       uses: actions/checkout@v2
