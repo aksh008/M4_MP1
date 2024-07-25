@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: pip install -r bikeshare_project-20240725T043601Z-001/bikeshare_project/requirements/requirements.txt
     - name: Train and save pipeline
-      run: python bbikeshare_project-20240725T043601Z-001/bikeshare_project/bikeshare_model/train_pipeline.py
+      run: python bikeshare_project-20240725T043601Z-001/bikeshare_project/bikeshare_model/train_pipeline.py
     - uses: actions/upload-artifact@v2
       with:
         name: my-trained-pipeline
