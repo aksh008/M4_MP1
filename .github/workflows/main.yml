@@ -70,6 +70,7 @@ push-image:
   steps:
   - name: Repo Checkout
     uses: actions/checkout@v2
+
   - uses: actions/download-artifact@v2
     with:
       name: my-build-package
@@ -77,19 +78,19 @@ push-image:
 
   - name: Login to Docker hub
     env:
-    DOCKER_USER: ${{ secrets.DOCKER_HUB_USERNAME }}
-    DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB_SECRET }}
-  run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      DOCKER_USER: ${{ secrets.DOCKER_HUB_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB_SECRET }}
+    run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
   - name: Build the Docker image for Fastapi app
     env:
       DOCKER_USER: ${{ secrets.DOCKER_HUB_USERNAME }}
     run: docker build . -f Dockerfile -t $DOCKER_USER/titanic-fastapi:latest
 
-- name: Push the Docker Image
-  env:
-    DOCKER_USER: ${{ secrets.DOCKER_HUB_USERNAME }}
-  run: docker push $DOCKER_USER/titanic-fastapi
+  - name: Push the Docker Image
+    env:
+      DOCKER_USER: ${{ secrets.DOCKER_HUB_USERNAME }}
+    run: docker push $DOCKER_USER/titanic-fastapi
 
-- name: Logout to Docker hub
-  run: docker logout
+  - name: Logout to Docker hub
+    run: docker logout
