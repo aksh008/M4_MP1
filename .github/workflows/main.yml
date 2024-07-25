@@ -57,7 +57,7 @@ jobs:
     - name: Install dependencies
       run: pip install --upgrade build
     - name: Build package
-      run: python -m build
+      run: python -m build -C bikeshare_project-20240725T043601Z-001/bikeshare_project
     - uses: actions/upload-artifact@v2
       with:
         name: my-build-package
