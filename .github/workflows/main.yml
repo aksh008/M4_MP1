@@ -83,7 +83,9 @@ jobs:
       env:
         DOCKER_USER: ${{ secrets.DOCKER_HUB_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB_SECRET }}
-      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      run: |
+        cd bikeshare_project-20240725T043601Z-001/bikeshare_project/bikeshare_model_api
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
     - name: Build the Docker image for Fastapi app
       env:
