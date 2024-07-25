@@ -20,7 +20,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: my-trained-pipeline
-        path: bikeshare_project/bikeshare_model/trained_models/*.pkl
+        path: bikeshare_project-20240725T043601Z-001/bikeshare_project/bikeshare_model/trained_models/*.pkl
         retention-days: 1
 
   test:
