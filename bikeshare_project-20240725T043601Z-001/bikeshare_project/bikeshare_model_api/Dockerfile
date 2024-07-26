@@ -5,7 +5,11 @@ FROM python:3.10
 WORKDIR /app
 
 # Copy the wheel file into the container
-COPY bikeshare_model-0.0.1-py3-none-any.whl .
+COPY bikeshare_project-20240725T043601Z-001/bikeshare_project/bikeshare_model_api/bikeshare_model-0.0.1-py3-none-any.whl .
+
+# Copy application files to the container
+COPY bikeshare_project-20240725T043601Z-001/bikeshare_project/bikeshare_model_api /app
+
 
 # Copy application files to the container
 COPY . /app
