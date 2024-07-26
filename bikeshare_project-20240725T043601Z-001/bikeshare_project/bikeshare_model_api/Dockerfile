@@ -4,6 +4,9 @@ FROM python:3.10
 # Set the working directory
 WORKDIR /app
 
+# Copy the wheel file into the container
+COPY bikeshare_model-0.0.1-py3-none-any.whl .
+
 # Copy application files to the container
 COPY . /app
 
