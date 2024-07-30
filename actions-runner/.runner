@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 21,
+  "agentName": "my-codespace-runner",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus10.actions.githubusercontent.com/ArSRPIZm4tBvFoCzmUkey8liNvxJnGECsbIoGhR9uNHFGj5USv/",
+  "gitHubUrl": "https://github.com/aksh008/M4_MP1",
+  "workFolder": "_work"
+}
