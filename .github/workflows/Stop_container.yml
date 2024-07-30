@@ -1,0 +1,11 @@
+name: Stop Container Pipeline
+# Manual trigger only
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: codespace-01
+    steps:
+      - name: Stop Old Docker Container
+        run: sudo docker stop bikeshare_model_api-container || true
