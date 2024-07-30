@@ -26,7 +26,7 @@ def index(request: Request) -> Any:
     body = (
         "<html>"
         # "<body style='padding: 10px;'>"
-        "<body style='padding: 10px; background-image: url(\"https://wallpapercave.com/wp/wp2544921.jpg\"); background-size: cover;'>"
+        "<body style='padding: 10px; background-image: url(\"https://wallpapercave.com/wp/wp14241826.jpg\"); background-size: cover;'>"
         "<h1>Welcome to the API  by AIML Batch 3</h1>"
         "<div>"
         "Check the docs: <a href='/docs'>here</a>"
