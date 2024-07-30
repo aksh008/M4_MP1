@@ -10,7 +10,10 @@ COPY bikeshare_project-20240725T043601Z-001/bikeshare_project/bikeshare_model_ap
 # Copy application files to the container
 COPY bikeshare_project-20240725T043601Z-001/bikeshare_project/bikeshare_model_api /app
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 # Copy application files to the container
 COPY . /app
 
