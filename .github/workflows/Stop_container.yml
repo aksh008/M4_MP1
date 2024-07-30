@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  Stop:
     runs-on: codespace-01
     steps:
       - name: Stop Old Docker Container
