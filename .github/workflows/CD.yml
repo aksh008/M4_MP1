@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ec2
+    runs-on: ec2new
     steps:
       - name: Pull Docker Image
         env:
