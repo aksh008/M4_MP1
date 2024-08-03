@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: codespace-01
+    runs-on: ec2
     steps:
       - name: Pull Docker Image
         env:
